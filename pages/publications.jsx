@@ -9,7 +9,8 @@ const publications = ({ posts }) => {
   return (
     <div className="template centered">
       <h1 className="heading">Publications</h1>
-      {<ComingSoon /> && (
+      {lists.length == 0 && <ComingSoon />}
+      {lists.length != 0 && (
         <div>
           {lists.map((post) => (
             <Post post={post} key={post.id} />

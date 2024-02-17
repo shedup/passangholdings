@@ -10,6 +10,11 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   color: #333;
   background-color: #f4f4f4;
   line-height: 1.6;
@@ -36,6 +41,10 @@ header h1,
 .heading {
   margin-bottom: 10px;
   font-size: 50px;
+}
+
+header h1 {
+  margin-bottom: -10px;
 }
 
 .contain {
@@ -67,7 +76,6 @@ nav ul li a {
 }
 a:link {
   text-decoration: none;
-  color: blue !important;
 }
 a:hover {
   color: lightgrey !important;
@@ -80,16 +88,17 @@ a:active {
   color: blue;
 }
 
-#feature-image {
+.feature-image {
   background-color: white;
   padding: 60px 0;
   color: black;
   padding-left: 60px;
+  height: 100vh;
 }
 .template {
   background-color: white;
   padding: 60px 0;
-  height: 500px;
+  height: 100vh;
 }
 .centered {
   text-align: center;
@@ -107,6 +116,7 @@ a:active {
   float: left;
   height: auto;
   margin-right: 10px;
+  display: flex;
 }
 
 /* Responsive Design */
@@ -115,15 +125,39 @@ a:active {
     display: block;
     margin: 5px 0;
   }
+  .content {
+    padding: 0px;
+  }
+  .feature-image p {
+    font-size: 15px;
+  }
+  .feature-image {
+    padding: 5px;
+  }
+  p {
+    font-size: 5px;
+  }
+  img {
+    margin: 0px 0px;
+    width: 50%;
+  }
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-size: 1.5rem;
+    font-size: 0.5rem;
   }
-  p {
-    font-size: 5px;
+  header h1,
+  .heading {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+  nav ul {
+    padding: 0px 0;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
   }
 }
 
@@ -138,4 +172,17 @@ a:active {
 }
 .background-minnesota {
   background-image: url("../public/images/image1.png");
+  background-attachment: fixed;
+  background-size: auto;
+  object-fit: cover;
+}
+.footer-container {
+  margin-bottom: 0%;
+}
+html {
+  height: 100%;
+}
+.site-container {
+  overflow: hidden;
+  min-height: 100%;
 }

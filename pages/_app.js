@@ -4,9 +4,11 @@ import "@/styles/globals.css";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Nav />
-      <Component {...pageProps} />
-      <Footer />
+      <div>
+        <Nav />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
     </>
   );
 }
