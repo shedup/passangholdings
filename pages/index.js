@@ -16,7 +16,7 @@ const Home = () => {
           <p>
             Welcome to Passang Holdings. I will post my investment portofolio
             here. Additionally I will write monthly
-            <Link href="/publication"> publications </Link>
+            <Link href="/publications"> publications </Link>
             about my thoughts on the financail markets. Investment transactions
             will be updated quarterly. However, I don't expect any radical
             capital allocation since most of the investments are held for more
