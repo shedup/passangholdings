@@ -71,7 +71,6 @@ nav ul li a {
   padding: 60px 0;
   color: #ffffff;
   padding-left: 60px;
-  display: flex;
 }
 .template {
   background-color: #0096c7;
@@ -91,7 +90,9 @@ nav ul li a {
   background-color: #0077b6;
 }
 .profile-pic {
-  width: 500px;
+  float: left;
+  height: auto;
+  margin-right: 10px;
 }
 
 /* Responsive Design */
@@ -99,6 +100,16 @@ nav ul li a {
   nav ul li {
     display: block;
     margin: 5px 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 5px;
   }
 }
 
