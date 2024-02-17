@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 /* Reset some basic styling */
 * {
@@ -65,29 +65,29 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
- a:link{
-   text-decoration: none;
-   color: blue !important;
- }
- a:hover{
-   color: lightgrey !important;
- }
- a:active{
-   cursor: pointer;
-   color: black !important;
- }
- .links{
-   color: blue;
- }
+a:link {
+  text-decoration: none;
+  color: blue !important;
+}
+a:hover {
+  color: lightgrey !important;
+}
+a:active {
+  cursor: pointer;
+  color: black !important;
+}
+.links {
+  color: blue;
+}
 
 #feature-image {
-  background-color: #0096c7;
+  background-color: white;
   padding: 60px 0;
-  color: #ffffff;
+  color: black;
   padding-left: 60px;
 }
 .template {
-  background-color: #0096c7;
+  background-color: white;
   padding: 60px 0;
   height: 500px;
 }
@@ -101,7 +101,7 @@ nav ul li a {
 
 #content {
   padding: 20px;
-  background-color: #0077b6;
+  background-color: lightgray;
 }
 .profile-pic {
   float: left;
@@ -130,4 +130,12 @@ nav ul li a {
 .icons {
   display: block;
   margin: auto;
+}
+
+.post-preview {
+  text-align: left;
+  margin: 0px 15px;
+}
+.background-minnesota {
+  background-image: url("../public/images/image1.png");
 }

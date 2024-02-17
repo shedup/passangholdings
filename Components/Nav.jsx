@@ -3,7 +3,7 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <header>
+    <header className="background-minnesota">
       <h1>Passang Holdings</h1>
       <h2>Based in Minnesota</h2>
       <h3>Land of 10,000 Lakes</h3>
