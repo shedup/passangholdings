@@ -67,14 +67,17 @@ nav ul li a {
 }
  a:link{
    text-decoration: none;
-   color: blue;
+   color: blue !important;
  }
- a:active{
-   color: yellow !important;
+ a:hover{
+   color: lightgrey !important;
  }
  a:active{
    cursor: pointer;
-   color: red!important;
+   color: black !important;
+ }
+ .links{
+   color: blue;
  }
 
 #feature-image {
