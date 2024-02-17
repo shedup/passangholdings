@@ -2,32 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Reset some basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, serif;
+}
+p {
+  font-family: Verdana, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+header {
+  background-color: #0077b6;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1,
+.heading {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px 0;
+  justify-content: space-between;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 40px;
+}
+nav {
+  display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#feature-image {
+  background-color: #0096c7;
+  padding: 60px 0;
+  color: #ffffff;
+  padding-left: 60px;
+  display: flex;
+}
+.template {
+  background-color: #0096c7;
+  padding: 60px 0;
+  height: 500px;
+}
+.centered {
+  text-align: center;
+}
+#feature-image p {
+  margin: 0px 10px;
+  font-size: 30px;
+}
+
+#content {
+  padding: 20px;
+  background-color: #0077b6;
+}
+.profile-pic {
+  width: 500px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 5px 0;
   }
+}
+
+.icons {
+  display: block;
+  margin: auto;
 }
