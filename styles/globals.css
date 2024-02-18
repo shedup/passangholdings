@@ -98,12 +98,14 @@ a:active {
 .template {
   background-color: white;
   padding: 60px 0;
-  height: 100vh;
+}
+.legal {
+  padding-left: 10px;
 }
 .centered {
   text-align: center;
 }
-#feature-image p {
+.feature-image p {
   margin: 0px 10px;
   font-size: 30px;
 }
@@ -185,4 +187,12 @@ html {
 .site-container {
   overflow: hidden;
   min-height: 100%;
+}
+
+.form-page {
+  width: 50%;
+  margin: 10vh auto;
+}
+.form-page button {
+  margin-top: 20px;
 }
