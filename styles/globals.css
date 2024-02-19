@@ -162,7 +162,7 @@ a:active {
   margin: 0px 15px;
 }
 .background-minnesota {
-  background-image: url("../public/images/image1.png");
+  background-image: url("../public/images/minnesota.png");
   background-attachment: fixed;
   background-size: auto;
   object-fit: cover;
