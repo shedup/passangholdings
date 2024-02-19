@@ -1,3 +1,4 @@
+import { ComingSoon } from "@/Components";
 import React, { useState } from "react";
 
 const register = () => {
