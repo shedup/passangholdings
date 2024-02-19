@@ -24,7 +24,7 @@ const about = () => {
       </div>
       <div className="template legal">
         <p>
-          <a href="https://passangholdings.vercel.app/disclaimer.pdf" download>
+          <a href="https://passangholdings.com/disclaimer.pdf" target="_blank">
             Legal disclaimer
           </a>
         </p>

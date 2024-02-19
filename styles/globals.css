@@ -136,24 +136,13 @@ a:active {
   .feature-image {
     padding: 5px;
   }
-  p {
-    font-size: 5px;
-  }
   img {
     margin: 0px 0px;
     width: 50%;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-size: 0.5rem;
-  }
   header h1,
   .heading {
-    margin-bottom: 0px;
-    font-size: 20px;
+    margin-bottom: 5px;
   }
   nav ul {
     padding: 0px 0;
@@ -195,4 +184,8 @@ html {
 }
 .form-page button {
   margin-top: 20px;
+}
+
+.full-screen {
+  height: 100vh;
 }

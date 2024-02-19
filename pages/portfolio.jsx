@@ -4,7 +4,6 @@ import React from "react";
 const portfolio = () => {
   return (
     <div className="template centered">
-      <h1 className="heading">Portfolio</h1>
       <h2>Amazon</h2>
       <p>
         - The majority of my investments are in Amazon. Amazon was started on

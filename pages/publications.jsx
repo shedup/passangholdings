@@ -7,16 +7,16 @@ const publications = ({ posts }) => {
   console.log(lists);
   console.log(lists[0]);
   return (
-    <div className="template centered">
-      <h1 className="heading">Publications</h1>
-      {lists.length == 0 && <ComingSoon />}
-      {lists.length != 0 && (
+    <div className="template centered full-screen">
+      <p>Zero Publications yet</p>
+      {/* {lists.length == -1 && <ComingSoon />}
+      {lists.length != -1 && (
         <div>
           {lists.map((post) => (
             <Post post={post} key={post.id} />
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 };

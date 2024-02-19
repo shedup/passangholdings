@@ -29,7 +29,7 @@ const register = () => {
   };
   return (
     <div className="form-page form-control">
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <label htmlFor="name">Enter your fullname</label>
         <input
           onChange={(e) => setName(e.target.value)}
@@ -57,7 +57,8 @@ const register = () => {
         <button className="btn btn-primary" type="submit">
           Sign up
         </button>
-      </form>
+      </form> */}
+      <ComingSoon />
     </div>
   );
 };
