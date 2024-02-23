@@ -4,7 +4,7 @@ import React from "react";
 const about = () => {
   return (
     <>
-      <div className="template centered">
+      <div className="template centered full-screen">
         <h1>Contact:</h1>
         <p>
           Email:
