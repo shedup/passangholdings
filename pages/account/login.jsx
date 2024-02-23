@@ -14,6 +14,8 @@ const register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log("Before 1");
+      console.log("email, password", JSON.stringify({ email, password }));
       const resp = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -22,6 +24,7 @@ const register = () => {
         body: JSON.stringify({ email, password }),
       });
       const res = await resp.json();
+      console.log("res", res);
       if (resp.ok) {
         // redirect user
         console.log("Success", res.message);
@@ -33,6 +36,7 @@ const register = () => {
         toast.error(`Invalid username or password.`);
       }
     } catch (err) {
+      console.log("Before catch");
       toast.error(`Something went wrong, try again.`);
       console.error("Error:", err.message);
     }
