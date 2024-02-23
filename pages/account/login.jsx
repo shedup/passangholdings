@@ -40,7 +40,7 @@ const register = () => {
     }
   };
   return (
-    <div className="form-page form-control">
+    <div className="form-page ">
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input

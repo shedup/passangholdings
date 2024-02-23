@@ -1,4 +1,4 @@
-import { Nav, Footer } from "@/Components";
+import { Nav, Footer, Layout } from "@/Components";
 import { AuthContext } from "@/context/AuthContext";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -12,23 +12,23 @@ export default function App({ Component, pageProps }) {
         <Head>
           <title>Passang Holdings</title>
         </Head>
-        <Toaster
-          toastOptions={{
-            style: {
-              background: "gray",
-              color: "white",
-            },
-          }}
-          containerStyle={{
-            top: 60,
-            left: 20,
-            bottom: 20,
-            right: 20,
-          }}
-        />
-        <Nav />
-        <Component {...pageProps} />
-        <Footer />
+        <Layout>
+          <Toaster
+            toastOptions={{
+              style: {
+                background: "gray",
+                color: "white",
+              },
+            }}
+            containerStyle={{
+              top: 60,
+              left: 20,
+              bottom: 20,
+              right: 20,
+            }}
+          />
+          <Component {...pageProps} />
+        </Layout>
       </AuthContext>
       <Analytics />
     </>
