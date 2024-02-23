@@ -32,7 +32,11 @@ export const AuthContext = ({ children }) => {
     console.log("Before", userData);
     const stringedUser = JSON.stringify(userData);
     console.log("After", stringedUser);
-    Cookies.set("user", stringedUser, { expires: 1 }); // 1 day.
+    Cookies.set("user", stringedUser, {
+      expires: 1,
+      sameSite: "None",
+      secure: true,
+    }); // 1 day.
     checkIfAdmin(userData);
   };
 
