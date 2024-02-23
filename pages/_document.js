@@ -1,11 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { Analytics } from "@vercel/analytics/react";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Passang Holdings</title>
         <link rel="icon" href="/favicon.svg" sizes="any" />
         <link
           rel="stylesheet"
@@ -32,7 +30,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Analytics />
       </body>
     </Html>
   );

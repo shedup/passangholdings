@@ -1,7 +1,9 @@
+import { useAuthContext } from "@/context/AuthContext";
 import Link from "next/link";
 import React from "react";
 
 const Nav = () => {
+  const { isLoggedIn, logout } = useAuthContext();
   return (
     <header className="background-minnesota">
       <h1>Passang Holdings</h1>
@@ -17,11 +19,23 @@ const Nav = () => {
               <Link href="/portfolio">Portfolio</Link>
             </li>
             <li>
-              <Link href="publications">Publication</Link>
+              <Link href="/publications">Publication</Link>
             </li>
             <li>
-              <Link href="about">About</Link>
+              <Link href="/about">About</Link>
             </li>
+            {!isLoggedIn && (
+              <li>
+                <Link href="/account/login">Login</Link>
+              </li>
+            )}
+            {isLoggedIn && (
+              <li>
+                <a className="hoverable" onClick={logout}>
+                  Logout
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

@@ -1,13 +1,14 @@
 import { ComingSoon, Post } from "@/Components";
+import { useAuthContext } from "@/context/AuthContext";
 import prisma from "@/lib/prisma";
 import React from "react";
 
 const publications = ({ posts }) => {
-  let lists = JSON.parse(posts);
-  console.log(lists);
-  console.log(lists[0]);
+  // let lists = JSON.parse(posts);
+  const { isAdmin } = useAuthContext();
   return (
     <div className="template centered full-screen">
+      {isAdmin && <button>Post</button>}
       <p>Zero Publications yet</p>
       {/* {lists.length == -1 && <ComingSoon />}
       {lists.length != -1 && (

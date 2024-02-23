@@ -189,3 +189,10 @@ html {
 .full-screen {
   height: 100vh;
 }
+
+.hoverable:hover {
+  cursor: pointer;
+}
+input:required:focus:invalid {
+  border: 2px solid red;
+}

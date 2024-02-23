@@ -1,51 +1,52 @@
 import { ComingSoon } from "@/Components";
+import { useAuthContext } from "@/context/AuthContext";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const register = () => {
-  const [name, setName] = useState("");
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { login } = useAuthContext();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const resp = await fetch("/api/register", {
+      const resp = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ email, password }),
       });
       const res = await resp.json();
       if (resp.ok) {
         // redirect user
-        toast.success(res.message);
+        console.log("Success", res.message);
+        login(res.user);
+        toast.success(`Welcome ${res.user.name}`);
+        router.push("/publications");
       } else {
-        toast.error(res.message);
-        console.error("Error: ", res.message);
+        console.error("Error: loggin in", res.message);
+        toast.error(`Invalid username or password.`);
       }
     } catch (err) {
-      toast.error(res.message);
+      toast.error(`Something went wrong, try again.`);
       console.error("Error:", err.message);
     }
   };
   return (
     <div className="form-page form-control">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your fullname</label>
-        <input
-          onChange={(e) => setName(e.target.value)}
-          className="form-control"
-          id="name"
-          type="text"
-        />
-
         <label htmlFor="email">Email</label>
         <input
           onChange={(e) => setEmail(e.target.value)}
           className="form-control"
           id="email"
           type="email"
+          required
         />
 
         <label htmlFor="password">Password</label>
@@ -54,10 +55,11 @@ const register = () => {
           className="form-control "
           id="password"
           type="password"
+          required
         />
 
         <button className="btn btn-primary" type="submit">
-          Sign up
+          Log In
         </button>
       </form>
     </div>
