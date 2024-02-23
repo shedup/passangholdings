@@ -23,16 +23,19 @@ const register = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-      const res = await resp.json();
-      console.log("res", res);
+      console.log("res", resp);
       if (resp.ok) {
         // redirect user
+        console.log("if");
+        const res = await resp.json();
+        console.log("after res");
         console.log("Success", res.message);
         login(res.user);
         toast.success(`Welcome ${res.user.name}`);
         router.push("/publications");
       } else {
-        console.error("Error: loggin in", res.message);
+        console.log("else");
+        console.error("Error: loggin in");
         toast.error(`Invalid username or password.`);
       }
     } catch (err) {

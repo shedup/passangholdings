@@ -37,7 +37,7 @@ export const AuthContext = ({ children }) => {
       sameSite: "None",
       secure: true,
     }); // 1 day.
-    checkIfAdmin(userData);
+    checkIfAdmin(stringedUser);
   };
 
   const logout = () => {
