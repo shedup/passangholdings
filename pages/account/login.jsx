@@ -9,13 +9,13 @@ const register = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const { login } = useAuthContext();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Before 1");
-      console.log("email, password", JSON.stringify({ email, password }));
+      setIsLoading(true);
       const resp = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -23,23 +23,18 @@ const register = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-      console.log("res", resp);
+      setIsLoading(false);
       if (resp.ok) {
         // redirect user
-        console.log("if");
         const res = await resp.json();
-        console.log("after res");
-        console.log("Success", res.message);
         login(res.user);
         toast.success(`Welcome ${res.user.name}`);
         router.push("/publications");
       } else {
-        console.log("else");
         console.error("Error: loggin in");
         toast.error(`Invalid username or password.`);
       }
     } catch (err) {
-      console.log("Before catch");
       toast.error(`Something went wrong, try again.`);
       console.error("Error:", err.message);
     }
@@ -65,7 +60,7 @@ const register = () => {
           required
         />
 
-        <button className="btn btn-primary" type="submit">
+        <button className="btn btn-primary" type="submit" disabled={isLoading}>
           Log In
         </button>
       </form>

@@ -18,9 +18,7 @@ export const AuthContext = ({ children }) => {
   }, []);
 
   const checkIfAdmin = (userData) => {
-    console.log("before", userData);
     const after = JSON.parse(userData);
-    console.log("after", after);
     if (after.email == "test1@gmail.com") {
       setIsAdmin(true);
     }
@@ -29,9 +27,7 @@ export const AuthContext = ({ children }) => {
   };
 
   const login = (userData) => {
-    console.log("Before", userData);
     const stringedUser = JSON.stringify(userData);
-    console.log("After", stringedUser);
     Cookies.set("user", stringedUser, {
       expires: 1,
       sameSite: "None",
