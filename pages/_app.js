@@ -8,10 +8,10 @@ import { Toaster } from "react-hot-toast";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>Passang Holdings</title>
-      </Head>
       <AuthContext>
+        <Head>
+          <title>Passang Holdings</title>
+        </Head>
         <Toaster
           toastOptions={{
             style: {
@@ -29,8 +29,8 @@ export default function App({ Component, pageProps }) {
         <Nav />
         <Component {...pageProps} />
         <Footer />
-        <Analytics />
       </AuthContext>
+      <Analytics />
     </>
   );
 }

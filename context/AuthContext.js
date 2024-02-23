@@ -18,7 +18,9 @@ export const AuthContext = ({ children }) => {
   }, []);
 
   const checkIfAdmin = (userData) => {
+    console.log("before", userData);
     const after = JSON.parse(userData);
+    console.log("after", after);
     if (after.email == "test1@gmail.com") {
       setIsAdmin(true);
     }
