@@ -38,17 +38,21 @@ const portfolio = () => {
       <h2>Completely liquidated equities:</h2>
       <ul>
         <li>NIO (NIO) (2021)</li>
+        <li>Kinross Gold Corp (KCC) (2021)</li>
         <li>APPLE (APPL) (2021)</li>
       </ul>
       <h2>Trimmed over the past 5 years:</h2>
       <ul>
-        <li>Permian Resources (PR)</li>
-        <li></li>
+        <li>Permian Resources (PR) (2021)</li>
+        <li>Amazon (AMZN) (2024)</li>
+      </ul>
+      <h2>Open Trade Positions</h2>
+      <ul>
+        <li>Nvidia (NVDA) (2024)</li>
       </ul>
       <h2>Potential investments under review:</h2>
       <ul>
         <li>Moet Hennessy Louis Vuitton (LVMH)</li>
-        <li>Coca-Cola Co (KO)</li>
       </ul>
     </div>
   );
