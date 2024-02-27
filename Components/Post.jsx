@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Post = ({
@@ -5,9 +6,11 @@ const Post = ({
 }) => {
   return (
     <div className="post-preview">
-      <h2>{title}</h2>
-      <p>{content}</p>
-      <hr />
+      <Link href={`/post/${title}`} style={{ textDecoration: "none" }}>
+        <h1>{title}</h1>
+        <p>{content}</p>
+        <hr />
+      </Link>
     </div>
   );
 };
