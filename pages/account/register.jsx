@@ -30,37 +30,38 @@ const register = () => {
     }
   };
   return (
-    <div className="form-page form-control">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your fullname</label>
-        <input
-          onChange={(e) => setName(e.target.value)}
-          className="form-control"
-          id="name"
-          type="text"
-        />
+    // <div className="form-page form-control">
+    //   <form onSubmit={handleSubmit}>
+    //     <label htmlFor="name">Enter your fullname</label>
+    //     <input
+    //       onChange={(e) => setName(e.target.value)}
+    //       className="form-control"
+    //       id="name"
+    //       type="text"
+    //     />
 
-        <label htmlFor="email">Email</label>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          className="form-control"
-          id="email"
-          type="email"
-        />
+    //     <label htmlFor="email">Email</label>
+    //     <input
+    //       onChange={(e) => setEmail(e.target.value)}
+    //       className="form-control"
+    //       id="email"
+    //       type="email"
+    //     />
 
-        <label htmlFor="password">Password</label>
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          className="form-control "
-          id="password"
-          type="password"
-        />
+    //     <label htmlFor="password">Password</label>
+    //     <input
+    //       onChange={(e) => setPassword(e.target.value)}
+    //       className="form-control "
+    //       id="password"
+    //       type="password"
+    //     />
 
-        <button className="btn btn-primary" type="submit">
-          Sign up
-        </button>
-      </form>
-    </div>
+    //     <button className="btn btn-primary" type="submit">
+    //       Sign up
+    //     </button>
+    //   </form>
+    // </div>
+    <h1>Not allowed.</h1>
   );
 };
 
