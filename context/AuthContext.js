@@ -19,7 +19,7 @@ export const AuthContext = ({ children }) => {
 
   const checkIfAdmin = (userData) => {
     const after = JSON.parse(userData);
-    if (after.email == "test1@gmail.com") {
+    if (after.email == "tenzinpassang001@outlook.com") {
       setIsAdmin(true);
     }
     setIsLoggedIn(true);

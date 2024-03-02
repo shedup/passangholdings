@@ -58,7 +58,7 @@ const publications = ({ posts }) => {
               Title
             </label>
             <input
-              className="border w-2/6"
+              className="border w-5/6"
               type="text"
               id="title"
               onChange={(e) => setTitle(e.target.value)}
@@ -71,7 +71,7 @@ const publications = ({ posts }) => {
             <textarea
               className="border"
               id="content"
-              rows="6"
+              rows="20"
               onChange={(e) => setContent(e.target.value)}
             />
           </div>
@@ -93,10 +93,11 @@ const publications = ({ posts }) => {
         </form>
       )}
       <div>
-        {/* {lists.map((post) => (
+        {lists.length === 0 && <h1 className="text-center">No posts yet.</h1>}
+        {lists.map((post) => (
           <Post post={post} key={post.id} />
-        ))} */}
-        <div className="post-preview">
+        ))}
+        {/* <div className="post-preview">
           <Link
             href={`/post/post-detailed`}
             className="no-underline text-black"
@@ -111,7 +112,7 @@ const publications = ({ posts }) => {
             </p>
             <hr />
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -119,16 +120,9 @@ const publications = ({ posts }) => {
 
 export const getStaticProps = async () => {
   const feed = await prisma.post.findMany({
-    where: { published: true },
-    include: {
-      author: {
-        select: { name: true },
-      },
-    },
+    orderBy: { createdAt: "desc" },
   });
   const posts = JSON.stringify(feed);
-  console.log("Fetched posts:", posts);
-  console.log("in sql");
   return {
     props: { posts },
     revalidate: 10,
