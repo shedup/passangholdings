@@ -24,18 +24,6 @@ const Nav = () => {
             <li>
               <Link href="/about">About</Link>
             </li>
-            {!isLoggedIn && (
-              <li>
-                <Link href="/account/login">Login</Link>
-              </li>
-            )}
-            {isLoggedIn && (
-              <li>
-                <a className="hoverable" onClick={logout}>
-                  Logout
-                </a>
-              </li>
-            )}
           </ul>
         </nav>
       </div>
