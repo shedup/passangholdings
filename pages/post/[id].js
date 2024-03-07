@@ -16,7 +16,6 @@ const options = {
   timeZoneName: "short",
   timeZone: "America/Chicago", // Adjust to your desired time zone
 };
-export const dynamic = "force-dynamic";
 const PostDetail = ({ post }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
