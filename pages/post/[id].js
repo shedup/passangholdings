@@ -209,19 +209,7 @@ const PostDetail = ({ post }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const feed = await prisma.post.findMany();
-  const paths = feed.map((item) => ({
-    params: {
-      id: item.id,
-    },
-  }));
-  return {
-    paths,
-    fallback: "blocking",
-  };
-};
-export const getStaticProps = async ({ params: { id } }) => {
+export const getServerSideProps = async ({ params: { id } }) => {
   const feed = await prisma.post.findMany();
   const filtered = feed.find((post) => post.id === id);
   const post = JSON.stringify(filtered);

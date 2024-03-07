@@ -119,14 +119,13 @@ const publications = ({ posts }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const feed = await prisma.post.findMany({
     orderBy: { createdAt: "desc" },
   });
   const posts = JSON.stringify(feed);
   return {
     props: { posts },
-    revalidate: 10,
   };
 };
 
