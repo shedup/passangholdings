@@ -20,7 +20,6 @@ const PostDetail = ({ post }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const { id, title, content, createdAt, updatedAt } = JSON.parse(post);
-  console.log("HERE", JSON.parse(post));
   const formatDate = new Date(createdAt).toLocaleDateString("en-US");
   const updatedDate = new Date(updatedAt).toLocaleString("en-US", options);
   const { isAdmin } = useAuthContext();
