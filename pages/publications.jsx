@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 
+export const revalidate = 0;
+
 const publications = ({ posts }) => {
   const router = useRouter();
   let lists = JSON.parse(posts);

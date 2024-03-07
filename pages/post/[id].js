@@ -16,7 +16,7 @@ const options = {
   timeZoneName: "short",
   timeZone: "America/Chicago", // Adjust to your desired time zone
 };
-export const revalidate = 1;
+export const revalidate = 0;
 const PostDetail = ({ post }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
