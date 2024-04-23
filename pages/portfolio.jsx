@@ -4,7 +4,7 @@ import React from "react";
 const portfolio = () => {
   return (
     <div className="template centered">
-      <h2>Amazon</h2>
+      {/* <h2>Amazon</h2>
       <p>
         - The majority of my investments are in Amazon. Amazon was started on
         July 5, 1994, by Jeff Bezos. It went public on May 15, 1997. The company
@@ -21,7 +21,7 @@ const portfolio = () => {
         Note - Amazon Prime members are eligible to get as many of the eligible
         medical prescription medications through Amazon Pharmacy RxPass for a $5
         per month flat fee.
-      </p>
+      </p> */}
       <h2>Permian Resources </h2>
       <p>
         - I invested in the company in 2020, and has been my longest-held
@@ -38,7 +38,7 @@ const portfolio = () => {
       <h2>Completely liquidated equities:</h2>
       <ul>
         <li>NIO (NIO) (2021)</li>
-        <li>Kinross Gold Corp (KCC) (2021)</li>
+        <li>Kinross Gold Corp (KGC) (2021)</li>
         <li>APPLE (APPL) (2021)</li>
       </ul>
       <h2>Trimmed over the past 5 years:</h2>
@@ -46,10 +46,10 @@ const portfolio = () => {
         <li>Permian Resources (PR) (2021)</li>
         <li>Amazon (AMZN) (2024)</li>
       </ul>
-      <h2>Open Trade Positions</h2>
+      {/* <h2>Open Trade Positions</h2>
       <ul>
         <li>Nvidia (NVDA) (2024)</li>
-      </ul>
+      </ul> */}
       <h2>Potential investments under review:</h2>
       <ul>
         <li>Moet Hennessy Louis Vuitton (LVMH)</li>
