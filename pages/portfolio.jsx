@@ -40,11 +40,11 @@ const portfolio = () => {
         <li>NIO (NIO) (2021)</li>
         <li>Kinross Gold Corp (KGC) (2021)</li>
         <li>APPLE (APPL) (2021)</li>
+        <li>Amazon (AMZN) (2024)</li>
       </ul>
       <h2>Trimmed over the past 5 years:</h2>
       <ul>
         <li>Permian Resources (PR) (2021)</li>
-        <li>Amazon (AMZN) (2024)</li>
       </ul>
       {/* <h2>Open Trade Positions</h2>
       <ul>
