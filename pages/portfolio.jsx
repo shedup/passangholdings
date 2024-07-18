@@ -37,15 +37,15 @@ const portfolio = () => {
       </p>
       <h2>Completely liquidated equities:</h2>
       <ul>
-        <li>NIO (NIO) (2021)</li>
-        <li>Kinross Gold Corp (KGC) (2021)</li>
+        {/* <li>NIO (NIO) (2021)</li>
+        <li>Kinross Gold Corp (KGC) (2021)</li> */}
         <li>APPLE (APPL) (2021)</li>
-        <li>Amazon (AMZN) (2024)</li>
+        {/* <li>Amazon (AMZN) (2024)</li> */}
       </ul>
-      <h2>Trimmed over the past 5 years:</h2>
+      {/* <h2>Trimmed over the past 5 years:</h2>
       <ul>
         <li>Permian Resources (PR) (2021)</li>
-      </ul>
+      </ul> */}
       {/* <h2>Open Trade Positions</h2>
       <ul>
         <li>Nvidia (NVDA) (2024)</li>
