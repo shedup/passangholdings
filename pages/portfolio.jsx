@@ -22,7 +22,7 @@ const portfolio = () => {
         medical prescription medications through Amazon Pharmacy RxPass for a $5
         per month flat fee.
       </p> */}
-      <h2>Permian Resources </h2>
+      {/* <h2>Permian Resources </h2>
       <p>
         - I invested in the company in 2020, and has been my longest-held
         investment. Permian Resources is an energy company focused on the
@@ -34,7 +34,7 @@ const portfolio = () => {
         reduce costs. With its strategic focus on the Permian Basin, known for
         its rich reserves and low extraction costs, Permian Resources is
         well-positioned for sustained growth and profitability.
-      </p>
+      </p> */}
       <h2>Completely liquidated equities:</h2>
       <ul>
         {/* <li>NIO (NIO) (2021)</li>
